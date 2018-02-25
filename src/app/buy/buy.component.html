@@ -1,0 +1,343 @@
+
+
+
+<div class="col-sm-12 col-lg-12">
+
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading" class="text-center">Order Book</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-lg-6">
+
+
+    <table class="table table-hover table-outline mb-0 hidden-sm-down">
+      <thead class="thead-default">
+      <tr>
+        <!--<th class="text-center"><i class="icon-people"></i></th>-->
+        <th class="text-center">ID</th>
+        <th class="text-center">Type</th>
+        <th>Quantity</th>
+        <th>Price</th>
+
+
+        <!--<th>Activity</th>-->
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let d of buyQueue ">
+
+        <td class="text-center">
+          <div>{{d.id}}</div>
+
+        </td>
+        <td class="text-center">
+          <img src="assets/img/Buy.png" style="height:24px;" src="assets/img/Buy.png">
+        </td>
+
+
+        <td>
+          <div class="clearfix">
+            <div class="float-left">
+              <strong>{{d.quantity}}</strong>
+            </div>
+
+          </div>
+
+        </td>
+
+
+        <td class="text-center">
+          <!--<i class="fa fa-cc-mastercard" style="font-size:24px"></i>-->
+          <div class="float-left">
+            <strong>{{d.price}}</strong>
+          </div>
+        </td>
+
+
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-sm-12 col-lg-6">
+
+    <table class="table table-hover table-outline mb-0 hidden-sm-down">
+      <thead class="thead-default">
+      <tr>
+        <!--<th class="text-center"><i class="icon-people"></i></th>-->
+        <th class="text-center">ID</th>
+        <th class="text-center">Type</th>
+        <th>Quantity</th>
+        <th>Price</th>
+
+
+        <!--<th>Activity</th>-->
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of sellQueue ">
+
+        <td class="text-center">
+          <div>{{s.id}}</div>
+
+        </td>
+
+        <td class="text-center">
+          <img src="assets/img/sell.png" style="height:24px;" src="assets/img/sell.png">
+        </td>
+
+
+        <td>
+          <div class="clearfix">
+            <div class="float-left">
+              <strong>{{s.quantity}}</strong>
+            </div>
+
+          </div>
+
+        </td>
+
+
+        <td class="text-center">
+          <!--<i class="fa fa-cc-mastercard" style="font-size:24px"></i>-->
+          <div class="float-left">
+            <strong>{{s.price}}</strong>
+          </div>
+        </td>
+
+
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="col-xs-12" style="height:50px;"></div>
+
+
+<div class="col-sm-12 col-lg-12">
+
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading" class="text-center">Last twenty orders</h4>
+  </div>
+</div>
+<div class="row">
+
+  <div class="col-sm-12 col-lg-6">
+
+    <table class="table table-hover table-outline mb-0 hidden-sm-down">
+      <thead class="thead-default">
+      <tr>
+        <!--<th class="text-center"><i class="icon-people"></i></th>-->
+        <th class="text-center">ID</th>
+        <th class="text-center">Type</th>
+        <th>Quantity</th>
+        <th>Price</th>
+
+
+        <!--<th>Activity</th>-->
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let d of buyQueue20 ">
+
+        <td class="text-center">
+          <div>{{d.id}}</div>
+
+        </td>
+        <td class="text-center">
+          <img src="assets/img/Buy.png" style="height:24px;" src="assets/img/Buy.png">
+        </td>
+
+
+        <td>
+          <div class="clearfix">
+            <div class="float-left">
+              <strong>{{d.quantity}}</strong>
+            </div>
+
+          </div>
+
+        </td>
+
+
+        <td class="text-center">
+          <!--<i class="fa fa-cc-mastercard" style="font-size:24px"></i>-->
+          <div class="float-left">
+            <strong>{{d.price}}</strong>
+          </div>
+        </td>
+
+
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-sm-12 col-lg-6">
+
+    <table class="table table-hover table-outline mb-0 hidden-sm-down">
+      <thead class="thead-default">
+      <tr>
+        <!--<th class="text-center"><i class="icon-people"></i></th>-->
+        <th class="text-center">ID</th>
+        <th class="text-center">Type</th>
+        <th>Quantity</th>
+        <th>Price</th>
+
+
+        <!--<th>Activity</th>-->
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of sellQueue20 ">
+
+        <td class="text-center">
+          <div>{{s.id}}</div>
+
+        </td>
+        <td class="text-center">
+          <img src="assets/img/sell.png" style="height:24px;" src="assets/img/sell.png">
+        </td>
+
+
+        <td class="text-center">
+          <div class="clearfix">
+            <div class="float-left">
+              <strong>{{s.quantity}}</strong>
+            </div>
+
+          </div>
+
+        </td>
+
+
+        <td class="text-center">
+          <!--<i class="fa fa-cc-mastercard" style="font-size:24px"></i>-->
+          <div class="float-left">
+            <strong>{{s.price}}</strong>
+          </div>
+        </td>
+
+
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="col-xs-12" style="height:50px;"></div>
+
+<div class="col-sm-12 col-lg-12">
+
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading" class="text-center">Latest Matches</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12" style="height:50px;"></div>
+  <div class="col-sm-12 col-lg-12">
+
+    <table class="table table-hover table-outline mb-0 hidden-sm-down">
+      <thead class="thead-default">
+      <tr>
+        <!--<th class="text-center"><i class="icon-people"></i></th>-->
+        <th class="text-center">ID</th>
+        <th  >Price</th>
+        <th >Quantity</th>
+
+        <th>buy Order Id</th>
+        <th >buy Order quantity</th>
+        <th >buy Order price</th>
+        <th >sell Order Id</th>
+
+        <th >sell Order quantity</th>
+        <th >sell Order price</th>
+        <th >Match time</th>
+
+
+
+        <!--<th>Activity</th>-->
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let m of matchQueue; let i=index ">
+
+        <td class="text-center">
+          <div>{{i}}</div>
+
+        </td>
+        <td class="text-center">
+          {{m.price}}
+        </td>
+
+
+        <td>
+          <div class="clearfix">
+            <div class="float-left">
+              <strong>{{m.quantity}}</strong>
+            </div>
+
+          </div>
+
+        </td>
+
+
+        <td class="text-center">
+          <!--<i class="fa fa-cc-mastercard" style="font-size:24px"></i>-->
+          <div class="float-left">
+            <strong>{{m.buyOrder.id}}</strong>
+          </div>
+        </td>
+        <td class="text-center">
+          <!--<i class="fa fa-cc-mastercard" style="font-size:24px"></i>-->
+          <div class="float-left">
+            <strong>{{m.buyOrder.quantity}}</strong>
+          </div>
+        </td>
+        <td class="text-center">
+          <!--<i class="fa fa-cc-mastercard" style="font-size:24px"></i>-->
+          <div class="float-left">
+            <strong>{{m.buyOrder.price}}</strong>
+          </div>
+        </td>
+        <td class="text-center">
+          <!--<i class="fa fa-cc-mastercard" style="font-size:24px"></i>-->
+          <div class="float-left">
+            <strong>{{m.sellOrder.id}}</strong>
+          </div>
+        </td>
+        <td class="text-center">
+          <!--<i class="fa fa-cc-mastercard" style="font-size:24px"></i>-->
+          <div class="float-left">
+            <strong>{{m.sellOrder.quantity}}</strong>
+          </div>
+        </td>
+        <td class="text-center">
+          <!--<i class="fa fa-cc-mastercard" style="font-size:24px"></i>-->
+          <div class="float-left">
+            <strong>{{m.sellOrder.price}}</strong>
+          </div>
+        </td>
+
+        <td class="text-center">
+          <!--<i class="fa fa-cc-mastercard" style="font-size:24px"></i>-->
+          <div class="float-left">
+            <strong>{{m.time | date :'short'}}</strong>
+          </div>
+        </td>
+
+
+      </tr>
+
+      </tbody>
+    </table>
+  </div></div>
+
+
+
+
+
