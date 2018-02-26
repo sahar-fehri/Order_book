@@ -21,14 +21,14 @@ import { ComponentsRoutingModule } from './components-routing.module';
 @NgModule({
   imports: [
     ComponentsRoutingModule,
-    ModalModule.forRoot(),
+   // ModalModule.forRoot(),
     TabsModule
   ],
   declarations: [
     ButtonsComponent,
     CardsComponent,
     FormsComponent,
-    ModalsComponent,
+    //ModalsComponent,
     SocialButtonsComponent,
     SwitchesComponent,
     TablesComponent,

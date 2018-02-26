@@ -264,7 +264,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let m of matchQueue; let i=index ">
+      <tr *ngFor="let m of matchQueue; let i=index " data-toggle="modal" (click)="successModal.show();" (click)= "mymodal(m);">
 
         <td class="text-center">
           <div>{{i}}</div>
@@ -332,6 +332,13 @@
 
 
       </tr>
+      <!--<tr>-->
+        <!--<button type="button" class="btn btn-success" data-toggle="modal" (click)="successModal.show()">-->
+          <!--Success modal-->
+        <!--</button>-->
+
+      <!--</tr>-->
+
 
       </tbody>
     </table>
@@ -340,4 +347,34 @@
 
 
 
+
+<div bsModal #successModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-success" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Match Details</h4>
+        <button type="button" class="close" (click)="successModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="list-group" *ngIf=visible>
+          <a href="#" class="list-group-item">Match Time: {{myOrder.time | date :'short'}} </a>
+          <a href="#" class="list-group-item">Price: {{myOrder.price}} </a>
+          <a href="#" class="list-group-item">Quantity: {{myOrder.quantity}} </a>
+          <a href="#" class="list-group-item">Buy Order Id:{{myOrder.buyOrder.id}} </a>
+          <a href="#" class="list-group-item">Buy Order Quantity: {{myOrder.buyOrder.quantity}}</a>
+          <a href="#" class="list-group-item">Buy Order Price: {{myOrder.buyOrder.price}}</a>
+          <a href="#" class="list-group-item">Sell Order ID:{{myOrder.sellOrder.id}} </a>
+          <a href="#" class="list-group-item">Sell Order Quantity:{{myOrder.sellOrder.quantity}} </a>
+          <a href="#" class="list-group-item">Sell Order Price: {{myOrder.sellOrder.price}}</a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="successModal.hide()">Close</button>
+        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 

@@ -14,6 +14,7 @@ import {spread} from "q";
 export class BuyComponent implements OnInit {
 
   x: number;
+  myOrder:any;
   ascending = true;
   buyQueue: Order [] = [];
   sellQueue: Order [] = [];
@@ -23,6 +24,7 @@ export class BuyComponent implements OnInit {
   buyQueue20 = [] = [];
   sellQueue20 = [] = []
   spread : number;
+  visible: boolean;
 
   constructor(private ss: OrdersService, private zone: NgZone) {
 
@@ -37,6 +39,11 @@ export class BuyComponent implements OnInit {
 
     });
 
+  }
+
+  mymodal(m){
+    this.myOrder=m;
+    this.visible = true;
   }
 
 

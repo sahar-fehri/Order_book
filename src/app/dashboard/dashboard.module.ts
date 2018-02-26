@@ -15,6 +15,12 @@ import { MyPipePipe } from "../my-pipe.pipe"
 
 import { SellComponent } from "../sell/sell.component"
 
+
+// Modal Component
+import { ModalModule } from 'ng2-bootstrap/modal';
+import { ModalsComponent } from '../components/modals.component';
+
+
 @NgModule({
   imports: [
     DashboardRoutingModule,
@@ -22,10 +28,13 @@ import { SellComponent } from "../sell/sell.component"
     BsDropdownModule,
     HttpModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   declarations: [ DashboardComponent,
-  BuyComponent,SellComponent, MyPipePipe ],
+  BuyComponent,SellComponent, MyPipePipe,
+    ModalsComponent,
+  ],
   providers: [OrdersService]
 })
 export class DashboardModule { }
