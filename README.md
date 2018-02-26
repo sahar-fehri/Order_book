@@ -16,7 +16,6 @@ Done:
 
 What is missing : 
 - The Match Queue is not sorted buy time creation
-- The match Queue shows all the details in a table and not in after a click (in a modal for example).
                   
                  
                  
