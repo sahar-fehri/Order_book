@@ -20,6 +20,9 @@ import { SellComponent } from "../sell/sell.component"
 import { ModalModule } from 'ng2-bootstrap/modal';
 import { ModalsComponent } from '../components/modals.component';
 
+import {Ng2PaginationModule} from 'ng2-pagination'; //importing ng2-pagination
+
+
 
 @NgModule({
   imports: [
@@ -29,6 +32,7 @@ import { ModalsComponent } from '../components/modals.component';
     HttpModule,
     CommonModule,
     FormsModule,
+    Ng2PaginationModule,
     ModalModule.forRoot()
   ],
   declarations: [ DashboardComponent,

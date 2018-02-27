@@ -59,6 +59,7 @@
 
       </tbody>
     </table>
+
   </div>
 
   <div class="col-sm-12 col-lg-6">
@@ -141,7 +142,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let d of buyQueue20 ">
+      <tr *ngFor="let d of buyQueue20 | paginate: {itemsPerPage: 10, currentPage:page, id: '1'} ">
 
         <td class="text-center">
           <div>{{d.id}}</div>
@@ -175,6 +176,11 @@
 
       </tbody>
     </table>
+    <pagination-controls (pageChange)="page = $event" id="1"
+                         maxSize="5"
+                         directionLinks="true"
+                         autoHide="true">
+    </pagination-controls>`
   </div>
 
   <div class="col-sm-12 col-lg-6">
@@ -193,7 +199,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let s of sellQueue20 ">
+      <tr *ngFor="let s of sellQueue20 | paginate: {itemsPerPage: 10, currentPage:page, id: '2'}">
 
         <td class="text-center">
           <div>{{s.id}}</div>
@@ -227,6 +233,11 @@
 
       </tbody>
     </table>
+    <pagination-controls (pageChange)="page = $event" id="2"
+                         maxSize="10"
+                         directionLinks="true"
+                         autoHide="true">
+    </pagination-controls>`
   </div>
 </div>
 <div class="col-xs-12" style="height:50px;"></div>
